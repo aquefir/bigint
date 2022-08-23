@@ -184,6 +184,9 @@ static enum bigint_cmp_retval bigint_s_cmp_impl( struct bigint_s * a, struct big
 		}
 	}
 
+	/* if we reach here, that means we checked the number, and they are
+	 * equal; whether that means truthy or falsey depends on who's calling
+	 */
 	return orequ ? BIGINT_TRUE : BIGINT_FALSE;
 }
 
